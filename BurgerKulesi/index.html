@@ -18,9 +18,9 @@
   <script>
     const canvas=document.getElementById('unity-canvas');
     const config={
-      dataUrl:'Build/web-release.data',
-      frameworkUrl:'Build/web-release.framework.js',
-      codeUrl:'Build/web-release.wasm',
+      dataUrl:'Build/burgerkulesi-yeni.data',
+      frameworkUrl:'Build/burgerkulesi-yeni.framework.js',
+      codeUrl:'Build/burgerkulesi-yeni.wasm',
       streamingAssetsUrl:'StreamingAssets',
       companyName:"Enes Dursun ve Doğukan Kalyoncu",
       productName:"Burger Kulesi",
@@ -29,7 +29,7 @@
       showBanner:(message,type)=>{if(type==='error')showError(message)}
     };
     function showError(message){document.getElementById('loading').style.display='flex';document.getElementById('status').textContent='Oyun açılamadı. Sayfayı yenile veya WebGL 2 destekleyen güncel bir tarayıcıyla dene. '+message;document.getElementById('progress').hidden=true}
-    const script=document.createElement('script');script.src='Build/web-release.loader.js';
+    const script=document.createElement('script');script.src='Build/burgerkulesi-yeni.loader.js';
     script.onload=()=>createUnityInstance(canvas,config,p=>document.getElementById('progress').value=p).then(instance=>{
       window.burgerInstance=instance;
       document.getElementById('loading').style.display='none';canvas.focus();
