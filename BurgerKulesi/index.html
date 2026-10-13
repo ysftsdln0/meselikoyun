@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Burger Kulesi</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#132d25;color:#fff2d8;font-family:system-ui,sans-serif}
+    #unity-canvas{display:block;width:100%;height:100%;touch-action:none;outline:none}
+    #loading{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#132d25;padding:24px;box-sizing:border-box;text-align:center}
+    h1{font-size:clamp(32px,6vw,64px);margin:0 0 12px;color:#ffda70}p{max-width:540px;line-height:1.5}
+    progress{width:min(340px,80vw);height:12px;accent-color:#e3432d}#status{font-size:15px}
+  </style>
+</head>
+<body>
+  <canvas id="unity-canvas" tabindex="0" aria-label="Burger Kulesi oyunu"></canvas>
+  <div id="loading" role="status"><h1>BURGER KULESİ</h1><p>Mutfak hazırlanıyor…</p><progress id="progress" max="1" value="0"></progress><p id="status">Bir kat daha. Bir rekor daha.</p></div>
+  <script>
+    const canvas=document.getElementById('unity-canvas');
+    const config={
+      dataUrl:'Build/web-release.data',
+      frameworkUrl:'Build/web-release.framework.js',
+      codeUrl:'Build/web-release.wasm',
+      streamingAssetsUrl:'StreamingAssets',
+      companyName:"Enes Dursun ve Doğukan Kalyoncu",
+      productName:"Burger Kulesi",
+      productVersion:"1.0.0",
+      matchWebGLToCanvasSize:true,
+      showBanner:(message,type)=>{if(type==='error')showError(message)}
+    };
+    function showError(message){document.getElementById('loading').style.display='flex';document.getElementById('status').textContent='Oyun açılamadı. Sayfayı yenile veya WebGL 2 destekleyen güncel bir tarayıcıyla dene. '+message;document.getElementById('progress').hidden=true}
+    const script=document.createElement('script');script.src='Build/web-release.loader.js';
+    script.onload=()=>createUnityInstance(canvas,config,p=>document.getElementById('progress').value=p).then(instance=>{
+      window.burgerInstance=instance;
+      document.getElementById('loading').style.display='none';canvas.focus();
+    }).catch(showError);
+    script.onerror=()=>showError('Oyun dosyalarına erişilemedi.');document.body.appendChild(script);
+    canvas.addEventListener('pointerdown',()=>canvas.focus());
+  </script>
+</body>
+</html>

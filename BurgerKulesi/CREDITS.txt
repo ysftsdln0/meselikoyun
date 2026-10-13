@@ -1,0 +1,31 @@
+Burger Kulesi
+Enes Dursun ve Doğukan Kalyoncu
+
+Kenney: Food Kit, Particle Pack, Impact Sounds, Interface Sounds, Music Jingles. CC0. https://kenney.nl
+
+Models downloaded from Poly Pizza (https://poly.pizza)
+
+Boots
+  Author:  Isa Lousberg
+  Source:  https://poly.pizza/m/7XCvej7wZU
+  License: CC0 1.0 (Public Domain) - https://creativecommons.org/publicdomain/zero/1.0/
+
+Socks
+  Author:  MiniPoly
+  Source:  https://poly.pizza/m/hcfzStK2HR
+  License: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
+  Attribution required: "Socks by MiniPoly [CC-BY] via Poly Pizza"
+
+Note: the FBX downloads do not include textures. tiny_treats_texture_1.png (Boots) and
+BaseColor.png (Socks) were extracted from the same models' GLB downloads on Poly Pizza.
+
+Cozy Puzzle In-Game 1
+Author: MintoDog
+Source: https://opengameart.org/content/cozy-puzzle-in-game-1
+Original file: cozy_puzzle_in-game_1_bpm118_0.ogg
+License: CC0 1.0 Universal (public domain dedication)
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded for Burger Kulesi on 2026-10-12. Original audio is unmodified.
+
+Fonts: Baloo 2 (Ek Type), Libre Baskerville (Impallari Type), Liberation Sans. SIL Open Font License 1.1; full notices in Licenses/.
+Animation: DOTween by Demigiant, https://dotween.demigiant.com (free version).
